@@ -45,7 +45,7 @@ execution.setVariable("testScriptOutput", 'Hi, this is js answering to ' + tmp);
     <sequenceFlow id="flow5" sourceRef="afterTheScript" targetRef="endevent1"></sequenceFlow>
     <scriptTask id="scripttask2" name="Script with http get" scriptFormat="javascript" activiti:autoStoreVariables="false">
       <script>
-var url = 'http://meteor:3000/api/test';
+var url = 'http://localhost:3000/api/test';
 
 var response = httpGet(url).data;
 execution.setVariable("testHttpOutput_json", response);
