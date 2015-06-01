@@ -11,7 +11,7 @@
     <startEvent id="request" activiti:initiator="employeeName">
       <extensionElements>
         <activiti:formProperty id="numberOfDays" name="Number of days" type="long" value="1" required="true"/>
-        <activiti:formProperty id="startDate" name="First day of holiday (dd-MM-yyy)" datePattern="dd-MM-yyyy hh:mm" type="date" required="true" />
+        <activiti:formProperty id="startDate" name="First day of holiday (dd-MM-yyy)" datePattern="yyyy-MM-dd" type="date" required="true" />
         <activiti:formProperty id="vacationMotivation" name="Motivation" type="string" />
       </extensionElements>
     </startEvent>
@@ -56,7 +56,7 @@
       </documentation>
       <extensionElements>
         <activiti:formProperty id="numberOfDays" name="Number of days" value="${numberOfDays}" type="long" required="true"/>
-        <activiti:formProperty id="startDate" name="First day of holiday (dd-MM-yyy)" value="${startDate}" datePattern="dd-MM-yyyy hh:mm" type="date" required="true" />
+        <activiti:formProperty id="startDate" name="First day of holiday (dd-MM-yyy)" value="${startDate}" datePattern="yyyy-MM-dd" type="date" required="true" />
         <activiti:formProperty id="vacationMotivation" name="Motivation" value="${vacationMotivation}" type="string" />
         <activiti:formProperty id="resendRequest" name="Resend vacation request to manager?" type="enum" required="true">
           <activiti:value id="true" name="Yes" />

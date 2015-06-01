@@ -169,6 +169,7 @@ public class DemoDataConfiguration {
         .addClasspathResource("createTimersProcess.bpmn20.xml")
         .addClasspathResource("oneTaskProcess.bpmn20.xml")
         .addClasspathResource("VacationRequest.bpmn20.xml")
+        .addClasspathResource("sampleProcess.bpmn20.xml")
         .addClasspathResource("VacationRequest.png")
         .addClasspathResource("FixSystemFailureProcess.bpmn20.xml")
         .addClasspathResource("FixSystemFailureProcess.png")
