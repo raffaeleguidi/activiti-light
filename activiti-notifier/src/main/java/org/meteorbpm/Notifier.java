@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URLConnection;
+import java.util.Map;
 
 import org.activiti.engine.delegate.event.ActivitiEvent;
 import org.activiti.engine.delegate.event.ActivitiEventListener;
@@ -15,7 +16,8 @@ public class Notifier implements ActivitiEventListener {
 	public void restNotify(ActivitiEventType eventType, String processDefinitionId, String processInstanceId) {
 		System.out.println("this is a notification of type: " + eventType + " for process " + processInstanceId);
 		try {
-			String theUrl = "http://localhost:3000/api/notification?" +
+			String baseUrl = System.getenv("METEOR_BASE_URL") != null ? System.getenv("METEOR_BASE_URL") : "http://localhost:3000";
+			String theUrl = baseUrl + "/api/notification?" +
 					"eventType=" + eventType +
 					"&processDefinitionId=" + processDefinitionId +
 					"&processInstanceId=" + processInstanceId ;
