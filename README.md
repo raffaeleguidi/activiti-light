@@ -6,7 +6,7 @@ requirements:
 * an user called "root" with pwd "root"
 * a database called "activiti"
 
-to start the engine on port
+to start the engine
 
 * ./start.sh
 * http://localhost:8080/activiti-rest
