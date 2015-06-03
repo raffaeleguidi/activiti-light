@@ -14,6 +14,7 @@ import org.activiti.engine.ProcessEngine;
 import org.activiti.engine.RepositoryService;
 import org.activiti.engine.RuntimeService;
 import org.activiti.engine.TaskService;
+import org.activiti.engine.delegate.event.ActivitiEventListener;
 import org.activiti.engine.form.AbstractFormType;
 import org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl;
 import org.activiti.explorer.form.MonthFormType;
@@ -22,6 +23,7 @@ import org.activiti.explorer.form.UserFormType;
 import org.activiti.spring.ProcessEngineFactoryBean;
 import org.activiti.spring.SpringProcessEngineConfiguration;
 import org.apache.commons.lang3.StringUtils;
+import org.meteorbpm.Notifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -126,6 +128,10 @@ public class ActivitiEngineConfiguration {
   	formTypes.add(new MonthFormType());
   	processEngineConfiguration.setCustomFormTypes(formTypes);
   	
+  	List<ActivitiEventListener> eventListeners = new ArrayList<ActivitiEventListener>();
+  	eventListeners.add(new Notifier());
+  	processEngineConfiguration.setEventListeners(eventListeners);
+
   	return processEngineConfiguration;
   }
   
