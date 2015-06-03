@@ -23,7 +23,6 @@ import org.activiti.explorer.form.UserFormType;
 import org.activiti.spring.ProcessEngineFactoryBean;
 import org.activiti.spring.SpringProcessEngineConfiguration;
 import org.apache.commons.lang3.StringUtils;
-import org.meteorbpm.Notifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -129,7 +128,7 @@ public class ActivitiEngineConfiguration {
   	processEngineConfiguration.setCustomFormTypes(formTypes);
   	
   	List<ActivitiEventListener> eventListeners = new ArrayList<ActivitiEventListener>();
-  	eventListeners.add(new Notifier());
+  	eventListeners.add(new org.mybpmbox.Notifier());
   	processEngineConfiguration.setEventListeners(eventListeners);
 
   	return processEngineConfiguration;

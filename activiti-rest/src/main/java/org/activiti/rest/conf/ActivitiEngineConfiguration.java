@@ -22,7 +22,7 @@ import org.activiti.rest.form.ProcessDefinitionFormType;
 import org.activiti.rest.form.UserFormType;
 import org.activiti.spring.ProcessEngineFactoryBean;
 import org.activiti.spring.SpringProcessEngineConfiguration;
-import org.meteorbpm.Notifier;
+import org.mybpmbox.Notifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

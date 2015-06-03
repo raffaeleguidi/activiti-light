@@ -4,7 +4,7 @@
 
   <name>Activiti - Rest Light</name>
   <artifactId>activiti-rest</artifactId>
-  <groupId>org.meteorbpm</groupId>
+  <groupId>org.mybpmbox</groupId>
   <packaging>war</packaging>
   <version>${activiti.version}</version>
 
@@ -138,7 +138,12 @@
 		<version>5.1.35</version>
 	</dependency>  
     <dependency>
-	  <groupId>org.metorbpm</groupId>
+		<groupId>org.codehaus.groovy</groupId>
+		<artifactId>groovy-all</artifactId>
+		<version>2.4.3</version>
+    </dependency>
+    <dependency>
+	  <groupId>org.mybpmbox</groupId>
       <artifactId>activiti-notifier</artifactId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>

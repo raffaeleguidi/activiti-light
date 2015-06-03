@@ -1,4 +1,4 @@
-package org.meteorbpm;
+package org.mybpmbox;
 
 import java.util.ArrayList;
 import java.util.List;

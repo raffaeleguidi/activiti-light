@@ -5,7 +5,7 @@
 
   <name>Activiti - Webapp - Explorer V2</name>
   <artifactId>activiti-explorer</artifactId>
-  <groupId>org.meteorbpm</groupId>
+  <groupId>org.mybpmbox</groupId>
   <version>${activiti.version}</version>
   <packaging>war</packaging>
 
@@ -215,7 +215,7 @@
 
     <!-- Running example processes -->
     <dependency>
-	  <groupId>org.metorbpm</groupId>
+	  <groupId>org.mybpmbox</groupId>
       <artifactId>activiti-notifier</artifactId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>

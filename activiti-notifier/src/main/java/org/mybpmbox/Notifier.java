@@ -1,4 +1,4 @@
-package org.meteorbpm;
+package org.mybpmbox;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -7,7 +7,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URLConnection;
 import java.util.List;
-import java.util.Map;
 
 import org.activiti.engine.delegate.event.ActivitiEvent;
 import org.activiti.engine.delegate.event.ActivitiEventListener;
@@ -15,7 +14,6 @@ import org.activiti.engine.delegate.event.ActivitiEventType;
 import org.activiti.engine.task.IdentityLink;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.client.RestTemplate;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
