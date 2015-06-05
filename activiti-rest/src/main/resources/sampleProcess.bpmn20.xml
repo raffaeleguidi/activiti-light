@@ -7,6 +7,7 @@
       </extensionElements>
     </startEvent>
     <userTask id="firstStep" name="Do something!" activiti:candidateGroups="management">
+      <documentation>This is a sample task that does almost nothing, but does it with passion.</documentation>
       <extensionElements>
         <activiti:formProperty id="testString" name="This is a test string" type="string" default="${testString}"></activiti:formProperty>
         <activiti:formProperty id="testDate" name="This is a date" type="date" datePattern="yyyy-MM-dd"></activiti:formProperty>
