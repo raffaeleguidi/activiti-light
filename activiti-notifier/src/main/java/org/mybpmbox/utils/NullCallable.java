@@ -1,4 +1,4 @@
-package org.mybpmbox;
+package org.mybpmbox.utils;
 
 import org.mozilla.javascript.Callable;
 import org.mozilla.javascript.Context;
