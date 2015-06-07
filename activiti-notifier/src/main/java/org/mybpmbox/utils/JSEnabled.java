@@ -26,6 +26,19 @@ public class JSEnabled {
 		Context.exit();
 		return parsed;
 	}
-	
+	public static String jsonStringify(ScriptableObject json) {
+		Context context = Context.enter();
+		Object result = NativeJSON.stringify(context, json, json, null, null);
+		String stringified = Context.toString(result);
+		Context.exit();
+		return stringified;
+	}
+	public static NativeObject jsonParse(String stringified) {
+		Context context = Context.enter();
+		ScriptableObject scope = context.initSafeStandardObjects();
+		NativeObject parsed = (NativeObject)NativeJSON.parse(context, scope, stringified, new NullCallable());
+		Context.exit();
+		return parsed;
+	}
 
 }
